@@ -91,6 +91,7 @@ VALUE cIGraph_get_eid(VALUE self, VALUE from, VALUE to, VALUE directed){
     int from_i = 0;
     int to_i = 0;
     igraph_bool_t directed_b = 0;
+    igraph_bool_t error = 0;
 
     Data_Get_Struct(self, igraph_t, graph);
 
@@ -100,7 +101,7 @@ VALUE cIGraph_get_eid(VALUE self, VALUE from, VALUE to, VALUE directed){
     if(directed)
       directed_b = 1;
     
-    igraph_get_eid(graph,&eid,from_i,to_i,directed_b);
+    igraph_get_eid(graph,&eid,from_i,to_i,directed_b, error);
   
     return INT2NUM(eid);
 

@@ -284,7 +284,7 @@ VALUE cIGraph_delete_edge(VALUE self, VALUE from, VALUE to){
   from_i = cIGraph_get_vertex_id(self,from);
   to_i   = cIGraph_get_vertex_id(self,to);
 
-  igraph_get_eid(graph,&eid,from_i,to_i,1);
+  igraph_get_eid(graph,&eid,from_i,to_i,1,0);
 
   igraph_delete_edges(graph,igraph_ess_1(eid));
 

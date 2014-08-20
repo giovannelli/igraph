@@ -230,7 +230,7 @@ int igraph_dijkstra_shortest_paths(const igraph_t *graph,
 	if(!included)
 	  continue;
 	
-  	igraph_get_eid(graph,&eid,u,v,1);
+        igraph_get_eid(graph,&eid,u,v,1,0);
 
 	alt = shortest[(int)u] + VECTOR(*wghts)[(int)eid];
 
