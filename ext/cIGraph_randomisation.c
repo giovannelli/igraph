@@ -23,7 +23,7 @@ VALUE cIGraph_rewire_edges(VALUE self, VALUE prop){
   Data_Get_Struct(self,      igraph_t, graph);
 
   igraph_copy(copy_graph,graph);
-  igraph_rewire_edges(copy_graph,NUM2DBL(prop));
+  igraph_rewire_edges(copy_graph,NUM2DBL(prop),1,1);
 
   return new_graph;
 
