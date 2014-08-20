@@ -70,7 +70,7 @@ int replace_i(VALUE key, VALUE val, VALUE hash);
 VALUE cIGraph_get_edge_attr(VALUE self, VALUE from, VALUE to);
 VALUE cIGraph_set_edge_attr(VALUE self, VALUE from, VALUE to, VALUE attr);
 VALUE cIGraph_graph_attributes(VALUE self);
-igraph_i_attribute_record_t cIGraph_create_record(VALUE v);
+igraph_attribute_record_t cIGraph_create_record(VALUE v);
 
 //Iterators
 VALUE cIGraph_each_vertex  (VALUE self);

@@ -102,7 +102,7 @@ int cIGraph_attribute_init(igraph_t *graph, igraph_vector_ptr_t *attr) {
 
   if(attr){
     for(i=0;i<igraph_vector_ptr_size(attr);i++){
-      igraph_i_attribute_record_t *attr_rec;
+      igraph_attribute_record_t *attr_rec;
       char *s;
       attr_rec = VECTOR(*attr)[i];
       key = rb_str_new2(attr_rec->name);
@@ -190,9 +190,9 @@ int cIGraph_attribute_add_vertices(igraph_t *graph, long int nv, igraph_vector_p
 
   if(attr){
 
-    if(igraph_vector_ptr_size(attr) > 0 && ((igraph_i_attribute_record_t*)VECTOR(*attr)[0])->type == IGRAPH_ATTRIBUTE_PY_OBJECT){
+    if(igraph_vector_ptr_size(attr) > 0 && ((igraph_attribute_record_t*)VECTOR(*attr)[0])->type == IGRAPH_ATTRIBUTE_PY_OBJECT){
 
-      values = (VALUE)((igraph_i_attribute_record_t*)VECTOR(*attr)[0])->value;
+      values = (VALUE)((igraph_attribute_record_t*)VECTOR(*attr)[0])->value;
       Check_Type(values, T_ARRAY);
       for(i=0;i<RARRAY_LEN(values);i++){
       rb_ary_push(vertex_array, RARRAY_PTR(values)[i]);
@@ -202,7 +202,7 @@ int cIGraph_attribute_add_vertices(igraph_t *graph, long int nv, igraph_vector_p
       for(i=0;i<nv;i++){
 	
 	VALUE record;
-	igraph_i_attribute_record_t *attr_rec;
+	igraph_attribute_record_t *attr_rec;
 	char *s;
 	record = rb_hash_new();
 
@@ -299,8 +299,8 @@ int cIGraph_attribute_add_edges(igraph_t *graph,
 
   if(attr){
     //If the only record is of type PY_OBJ then use the values as attributes
-    if(((igraph_i_attribute_record_t*)VECTOR(*attr)[0])->type == IGRAPH_ATTRIBUTE_PY_OBJECT){
-      values = (VALUE)((igraph_i_attribute_record_t*)VECTOR(*attr)[0])->value;
+    if(((igraph_attribute_record_t*)VECTOR(*attr)[0])->type == IGRAPH_ATTRIBUTE_PY_OBJECT){
+      values = (VALUE)((igraph_attribute_record_t*)VECTOR(*attr)[0])->value;
       Check_Type(values, T_ARRAY);
       for(i=0;i<RARRAY_LEN(values);i++){
 	rb_ary_push(edge_array, RARRAY_PTR(values)[i]);
@@ -309,7 +309,7 @@ int cIGraph_attribute_add_edges(igraph_t *graph,
     } else {
       for(i=0;i<igraph_vector_size(edges)/2;i++){
 	VALUE record;
-	igraph_i_attribute_record_t *attr_rec;
+	igraph_attribute_record_t *attr_rec;
 	char *s;
 	record = rb_hash_new();
 	for (j=0; j<igraph_vector_ptr_size(attr); j++) {

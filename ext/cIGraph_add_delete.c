@@ -32,7 +32,7 @@ VALUE cIGraph_add_edges(int argc, VALUE *argv, VALUE self){
   int i;
   igraph_vector_ptr_t edge_attr;
 
-  igraph_i_attribute_record_t e_attr_rec;
+  igraph_attribute_record_t e_attr_rec;
   e_attr_rec.name  = "__RUBY__";
   e_attr_rec.type  = IGRAPH_ATTRIBUTE_PY_OBJECT;
   e_attr_rec.value = (void*)rb_ary_new();
@@ -107,7 +107,7 @@ VALUE cIGraph_add_vertices(VALUE self, VALUE vs){
   int i;
   igraph_vector_ptr_t vertex_attr;
 
-  igraph_i_attribute_record_t v_attr_rec;
+  igraph_attribute_record_t v_attr_rec;
   v_attr_rec.name  = "__RUBY__";
   v_attr_rec.type  = IGRAPH_ATTRIBUTE_PY_OBJECT;
   v_attr_rec.value = (void*)rb_ary_new();
@@ -172,7 +172,7 @@ VALUE cIGraph_add_edge(int argc, VALUE *argv, VALUE self){
   VALUE to;
   VALUE attr;
 
-  igraph_i_attribute_record_t e_attr_rec;
+  igraph_attribute_record_t e_attr_rec;
   e_attr_rec.name  = "__RUBY__";
   e_attr_rec.type  = IGRAPH_ATTRIBUTE_PY_OBJECT;
   e_attr_rec.value = (void*)rb_ary_new();
@@ -235,7 +235,7 @@ VALUE cIGraph_add_vertex(VALUE self, VALUE v){
 
   VALUE v_ary;
 
-  igraph_i_attribute_record_t v_attr_rec;
+  igraph_attribute_record_t v_attr_rec;
   v_attr_rec.name  = "__RUBY__";
   v_attr_rec.type  = IGRAPH_ATTRIBUTE_PY_OBJECT;
   v_attr_rec.value = (void*)rb_ary_new();
