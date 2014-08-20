@@ -57,7 +57,7 @@ VALUE cIGraph_transitivity_local(VALUE self, VALUE vs){
 
   Data_Get_Struct(self, igraph_t, graph);
 
-  igraph_transitivity_local_undirected(graph,&res,vids);
+  igraph_transitivity_local_undirected(graph,&res,vids,IGRAPH_TRANSITIVITY_NAN);
 
   for(i=0;i<igraph_vector_size(&res);i++){
     rb_ary_push(trans,rb_float_new(VECTOR(res)[i]));
