@@ -231,7 +231,7 @@ VALUE cIGraph_get_adjacency(VALUE self, VALUE mode){
   //matrix to hold the results of the calculations
   igraph_matrix_init(&res,n,n);
 
-  igraph_get_adjacency(graph,&res,pmode);
+  igraph_get_adjacency(graph,&res,pmode,0);
 
   for(i=0; i<igraph_matrix_nrow(&res); i++){
     row = rb_ary_new();
