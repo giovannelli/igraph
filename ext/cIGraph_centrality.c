@@ -118,7 +118,7 @@ VALUE cIGraph_edge_betweenness(VALUE self, VALUE directed){
 
   Data_Get_Struct(self, igraph_t, graph);
 
-  igraph_edge_betweenness(graph,&res,dir);
+  igraph_edge_betweenness(graph,&res,dir,NULL);
 
   for(i=0;i<igraph_vector_size(&res);i++){
     rb_ary_push(betweenness,INT2NUM((int)VECTOR(res)[i]));
