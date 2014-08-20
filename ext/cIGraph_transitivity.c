@@ -89,7 +89,7 @@ VALUE cIGraph_transitivity_avglocal(VALUE self){
 
   Data_Get_Struct(self, igraph_t, graph);
 
-  igraph_transitivity_avglocal_undirected(graph,&res,igraph_transitivity_avglocal_undirected);
+  igraph_transitivity_avglocal_undirected(graph,&res,IGRAPH_TRANSITIVITY_NAN);
 
   return rb_float_new(res);
 
