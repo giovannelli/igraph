@@ -344,7 +344,7 @@ VALUE cIGraph_read_graph_lgl(VALUE self, VALUE file, VALUE names, VALUE weights)
   string = rb_funcall(file, rb_intern("read"), 0);
   stream = fmemopen(RSTRING_PTR(string),RSTRING_LEN(string), "r");
 
-  igraph_read_graph_lgl(graph, stream, names_b, weights_b);
+  igraph_read_graph_lgl(graph, stream, names_b, weights_b, 0);
 
   fclose(stream);
 
