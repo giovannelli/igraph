@@ -178,7 +178,7 @@ VALUE cIGraph_watts_strogatz_game(VALUE self, VALUE dim, VALUE size, VALUE nei, 
 
   igraph_destroy(graph);
   igraph_watts_strogatz_game(graph, NUM2INT(dim), NUM2INT(size),
-			     NUM2INT(nei), NUM2DBL(p));
+			     NUM2INT(nei), NUM2DBL(p),1,1);
 
   return new_graph;
 
