@@ -79,7 +79,8 @@ VALUE cIGraph_layout_fruchterman_reingold_3d(VALUE self,
 					NUM2DBL(volume),
 					NUM2DBL(coolexp),
 					NUM2DBL(repulserad),
-					1, NULL);
+					1, NULL,
+                                        NULL, NULL, NULL, NULL, NULL, NULL);
 
   return Data_Wrap_Struct(cIGraphMatrix, 0, cIGraph_matrix_free, res);
 
