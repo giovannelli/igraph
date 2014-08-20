@@ -424,6 +424,7 @@ VALUE cIGraph_preference_game(VALUE self, VALUE nodes, VALUE types, VALUE type_d
   igraph_destroy(graph);
   igraph_preference_game(graph, NUM2INT(nodes), NUM2INT(types),
 			    &type_distv,
+                            0,
 			    pref_matrixm,
 			    NULL,
 			    directed == Qtrue ? 1: 0,
