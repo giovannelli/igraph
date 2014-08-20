@@ -118,7 +118,7 @@ VALUE cIGraph_initialize(int argc, VALUE *argv, VALUE self){
   v_ary = rb_ary_new();
 
   if(!directed)
-    IGRAPH_CHECK(igraph_to_undirected(graph,IGRAPH_TO_UNDIRECTED_COLLAPSE));
+    IGRAPH_CHECK(igraph_to_undirected(graph,IGRAPH_TO_UNDIRECTED_COLLAPSE,0));
 
   //Loop through objects in edge Array
   for (i=0; i<RARRAY_LEN(edges); i++) {

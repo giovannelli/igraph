@@ -32,7 +32,7 @@ VALUE cIGraph_to_undirected(VALUE self, VALUE mode){
   int ret;
 
   Data_Get_Struct(self, igraph_t, graph);
-  IGRAPH_CHECK(ret = igraph_to_undirected(graph,pmode));
+  IGRAPH_CHECK(ret = igraph_to_undirected(graph,pmode,0));
 
   return INT2NUM(ret);
 
