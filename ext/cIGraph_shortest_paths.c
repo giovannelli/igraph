@@ -42,7 +42,7 @@ VALUE cIGraph_shortest_paths(VALUE self, VALUE from, VALUE mode){
   //create vertex selector from the vecotr of ids
   igraph_vs_vector(&vids,&vidv);
 
-  igraph_shortest_paths(graph,&res,vids,pmode);
+  igraph_shortest_paths(graph,&res,vids,igraph_vss_all(),pmode);
 
   for(i=0; i<igraph_matrix_nrow(&res); i++){
     row = rb_ary_new();
