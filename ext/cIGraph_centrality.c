@@ -30,7 +30,7 @@ VALUE cIGraph_closeness(VALUE self, VALUE vs, VALUE mode){
   //create vertex selector from the vecotr of ids
   igraph_vs_vector(&vids,&vidv);
 
-  igraph_closeness(graph,&res,vids,pmode);
+  igraph_closeness(graph,&res,vids,pmode,NULL);
 
   for(i=0;i<igraph_vector_size(&res);i++){
     rb_ary_push(closeness,rb_float_new(VECTOR(res)[i]));
