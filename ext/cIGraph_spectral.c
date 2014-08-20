@@ -39,7 +39,7 @@ VALUE cIGraph_laplacian(VALUE self, VALUE mode){
   //matrix to hold the results of the calculations
   igraph_matrix_init(&res,igraph_vcount(graph),igraph_vcount(graph));
 
-  IGRAPH_CHECK(igraph_laplacian(graph,&res,pmode));
+  IGRAPH_CHECK(igraph_laplacian(graph,&res,NULL,pmode,NULL));
 
   for(i=0; i<igraph_matrix_nrow(&res); i++){
     row = rb_ary_new();
