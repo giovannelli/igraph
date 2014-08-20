@@ -132,7 +132,7 @@ VALUE cIGraph_maximal_cliques(VALUE self){
 
   igraph_vector_ptr_init(&res,0);
 
-  igraph_maximal_cliques(graph, &res);
+  igraph_maximal_cliques(graph, &res, 0, 0);
 
   for(i=0; i<igraph_vector_ptr_size(&res); i++){
     clique = rb_ary_new();
