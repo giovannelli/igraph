@@ -20,7 +20,7 @@ VALUE cIGraph_transitivity(VALUE self){
 
   Data_Get_Struct(self, igraph_t, graph);
 
-  igraph_transitivity_undirected(graph,&res);
+  igraph_transitivity_undirected(graph,&res,IGRAPH_TRANSITIVITY_NAN);
 
   return rb_float_new(res);
 
