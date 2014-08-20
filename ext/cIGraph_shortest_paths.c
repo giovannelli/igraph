@@ -112,7 +112,7 @@ VALUE cIGraph_get_shortest_paths(VALUE self, VALUE from, VALUE to, VALUE mode){
   //The id of the vertex from where we are counting
   from_vid = cIGraph_get_vertex_id(self, from);
 
-  igraph_get_shortest_paths(graph,&res,from_vid,to_vids,pmode);
+  igraph_get_shortest_paths(graph,&res,NULL,from_vid,to_vids,pmode);
 
   for(i=0; i<n_paths; i++){
     path = rb_ary_new();
