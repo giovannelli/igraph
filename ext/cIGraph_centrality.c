@@ -79,7 +79,7 @@ VALUE cIGraph_betweenness(VALUE self, VALUE vs, VALUE directed){
   //create vertex selector from the vecotr of ids
   IGRAPH_CHECK(igraph_vs_vector(&vids,&vidv));
 
-  IGRAPH_CHECK(igraph_betweenness(graph,&res,vids,dir));
+  IGRAPH_CHECK(igraph_betweenness(graph,&res,vids,dir,NULL,1));
 
   for(i=0;i<igraph_vector_size(&res);i++){
     rb_ary_push(betweenness,rb_float_new((float)VECTOR(res)[i]));
