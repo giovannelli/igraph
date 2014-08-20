@@ -53,7 +53,7 @@ VALUE cIGraph_simplify(VALUE self, VALUE mult, VALUE loops){
 
   Data_Get_Struct(self, igraph_t, graph);
 
-  igraph_simplify(graph,m,l);
+  igraph_simplify(graph,m,l,0);
 
   return Qnil;
 
