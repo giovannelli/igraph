@@ -84,7 +84,7 @@ VALUE cIGraph_reciprocity(VALUE self, VALUE loops){
 
   Data_Get_Struct(self, igraph_t, graph);
 
-  igraph_reciprocity(graph,&r,l);
+  igraph_reciprocity(graph,&r,l,IGRAPH_RECIPROCITY_DEFAULT);
 
   return rb_float_new(r);
 
