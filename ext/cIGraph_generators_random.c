@@ -55,8 +55,8 @@ VALUE cIGraph_barabasi_game(VALUE self, VALUE nodes, VALUE m, VALUE outpref, VAL
   Data_Get_Struct(new_graph, igraph_t, graph);
 
   igraph_destroy(graph);
-  igraph_barabasi_game(graph, NUM2INT(nodes), NUM2INT(m), NULL, 
-		       outpref == Qtrue ? 1: 0, directed == Qtrue ? 1: 0);
+  igraph_barabasi_game(graph, NUM2INT(nodes), 1, NUM2INT(m), NULL, 
+		       outpref == Qtrue ? 1: 0, 1, directed == Qtrue ? 1: 0, IGRAPH_BARABASI_BAG, NULL);
 
   return new_graph;
 
