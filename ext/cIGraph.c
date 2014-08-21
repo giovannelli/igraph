@@ -507,8 +507,8 @@ void Init_igraph(){
   rb_define_method(cIGraph_layout, "layout_circle",                    cIGraph_layout_circle,                        0); /* in cIGraph_layout.c */
   rb_define_method(cIGraph_layout, "layout_fruchterman_reingold",      cIGraph_layout_fruchterman_reingold,          6); /* in cIGraph_layout.c */
   rb_define_method(cIGraph_layout, "layout_kamada_kawai",              cIGraph_layout_kamada_kawai,                  5); /* in cIGraph_layout.c */
-  rb_define_method(cIGraph_layout, "layout_reingold_tilford",          cIGraph_layout_reingold_tilford,              1); /* in cIGraph_layout.c */
-  rb_define_method(cIGraph_layout, "layout_reingold_tilford_circular", cIGraph_layout_reingold_tilford_circular, 1); /* in cIGraph_layout.c */
+  //rb_define_method(cIGraph_layout, "layout_reingold_tilford",          cIGraph_layout_reingold_tilford,              1); /* in cIGraph_layout.c */
+  //rb_define_method(cIGraph_layout, "layout_reingold_tilford_circular", cIGraph_layout_reingold_tilford_circular, 1); /* in cIGraph_layout.c */
   rb_define_method(cIGraph_layout, "layout_grid_fruchterman_reingold", cIGraph_layout_grid_fruchterman_reingold,     7); /* in cIGraph_layout.c */
   rb_define_method(cIGraph_layout, "layout_lgl",                       cIGraph_layout_lgl,                           7); /* in cIGraph_layout.c */
 

@@ -126,21 +126,21 @@ VALUE cIGraph_layout_kamada_kawai(VALUE self,
  * If the given graph is not a tree, a breadth-first search is executed 
  * first to obtain a possible spanning tree.
  */
-VALUE cIGraph_layout_reingold_tilford(VALUE self,
-				      VALUE root){		
-
-  igraph_t *graph;
-  igraph_matrix_t *res = malloc(sizeof(igraph_matrix_t));
-
-  Data_Get_Struct(self, igraph_t, graph);
- 
-  igraph_matrix_init(res,0,0);
-  igraph_layout_reingold_tilford(graph,res,
-				 cIGraph_get_vertex_id(self, root));
-  
-  return Data_Wrap_Struct(cIGraphMatrix, 0, cIGraph_matrix_free, res);
-
-}
+// VALUE cIGraph_layout_reingold_tilford(VALUE self,
+// 				      VALUE root){		
+// 
+//   igraph_t *graph;
+//   igraph_matrix_t *res = malloc(sizeof(igraph_matrix_t));
+// 
+//   Data_Get_Struct(self, igraph_t, graph);
+//  
+//   igraph_matrix_init(res,0,0);
+//   igraph_layout_reingold_tilford(graph,res,
+// 				 cIGraph_get_vertex_id(self, root));
+//   
+//   return Data_Wrap_Struct(cIGraphMatrix, 0, cIGraph_matrix_free, res);
+// 
+// }
 
 /* call-seq:
  *   graph.layout_reingold_tilford_circular -> IGraphMatrix
@@ -157,21 +157,21 @@ VALUE cIGraph_layout_reingold_tilford(VALUE self,
  * If the given graph is not a tree, a breadth-first search is executed 
  * first to obtain a possible spanning tree.
  */
-VALUE cIGraph_layout_reingold_tilford_circular(VALUE self,
-					       VALUE root){		
-
-  igraph_t *graph;
-  igraph_matrix_t *res = malloc(sizeof(igraph_matrix_t));
-
-  Data_Get_Struct(self, igraph_t, graph);
- 
-  igraph_matrix_init(res,0,0);
-  igraph_layout_reingold_tilford_circular(graph,res,
-					  cIGraph_get_vertex_id(self, root));
-  
-  return Data_Wrap_Struct(cIGraphMatrix, 0, cIGraph_matrix_free, res);
-
-}
+// VALUE cIGraph_layout_reingold_tilford_circular(VALUE self,
+// 					       VALUE root){		
+// 
+//   igraph_t *graph;
+//   igraph_matrix_t *res = malloc(sizeof(igraph_matrix_t));
+// 
+//   Data_Get_Struct(self, igraph_t, graph);
+//  
+//   igraph_matrix_init(res,0,0);
+//   igraph_layout_reingold_tilford_circular(graph,res,
+// 					  cIGraph_get_vertex_id(self, root));
+//   
+//   return Data_Wrap_Struct(cIGraphMatrix, 0, cIGraph_matrix_free, res);
+// 
+// }
 
 /* call-seq:
  *   graph.layout_grid_fruchterman_reingold -> IGraphMatrix
