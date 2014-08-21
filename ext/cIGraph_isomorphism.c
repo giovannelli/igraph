@@ -46,7 +46,7 @@ VALUE cIGraph_isomorphic_vf2(VALUE self, VALUE g){
   Data_Get_Struct(self, igraph_t, graph);
   Data_Get_Struct(g,    igraph_t, graph2);
 
-  IGRAPH_CHECK(igraph_isomorphic_vf2(graph,graph2,&res,NULL,NULL));
+  IGRAPH_CHECK(igraph_isomorphic_vf2(graph,graph2,NULL,NULL,NULL,NULL,&res,NULL,NULL,NULL,NULL,NULL));
 
   return res == 0 ? Qfalse : Qtrue;
 
