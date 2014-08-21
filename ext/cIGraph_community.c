@@ -644,7 +644,7 @@ VALUE cIGraph_community_fastgreedy(VALUE self){
   igraph_vector_init(&modularity,0);
 
   igraph_community_fastgreedy(graph,NULL,
-			      merges,&modularity,NULL);
+			      merges,&modularity);
 
   modularity_a = rb_ary_new();
   for(i=0;i<igraph_vector_size(&modularity);i++){
