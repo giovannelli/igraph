@@ -484,7 +484,7 @@ VALUE cIGraph_community_walktrap(VALUE self, VALUE weights, VALUE steps){
 
   igraph_community_walktrap(graph,
 			    igraph_vector_size(&weights_vec) > 0 ? &weights_vec : NULL,
-			    NUM2INT(steps),merges,&modularity);
+			    NUM2INT(steps),merges,&modularity,NULL);
 
   modularity_a = rb_ary_new();
   for(i=0;i<igraph_vector_size(&modularity);i++){
