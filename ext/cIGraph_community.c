@@ -141,7 +141,8 @@ VALUE cIGraph_community_spinglass(VALUE self, VALUE weights, VALUE spins, VALUE 
 			     &membership,NULL,NUM2INT(spins),parupdate_b,
 			     NUM2DBL(starttemp),NUM2DBL(stoptemp),
 			     NUM2DBL(coolfact),NUM2INT(update_rule),
-			     NUM2DBL(gamma));
+			     NUM2DBL(gamma),
+                             IGRAPH_SPINCOMM_IMP_ORIG,0);
   
   max_groupid = 0;
   for(i=0;i<igraph_vector_size(&membership);i++){
