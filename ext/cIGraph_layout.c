@@ -205,7 +205,7 @@ VALUE cIGraph_layout_grid_fruchterman_reingold(VALUE self,
 					  NUM2DBL(coolexp),
 					  NUM2DBL(repulserad),
 					  NUM2DBL(cellsize),
-					  use_seed == Qtrue ? 1: 0);
+					  use_seed == Qtrue ? 1: 0, NULL);
 
   return Data_Wrap_Struct(cIGraphMatrix, 0, cIGraph_matrix_free, res);
 
