@@ -70,7 +70,8 @@ VALUE cIGraph_layout_fruchterman_reingold(VALUE self,
 				     NUM2DBL(area),
 				     NUM2DBL(coolexp),
 				     NUM2DBL(repulserad),
-				     use_seed == Qtrue ? 1: 0, NULL);
+				     use_seed == Qtrue ? 1: 0, NULL,
+                                     NULL, NULL, NULL, NULL);
 
   return Data_Wrap_Struct(cIGraphMatrix, 0, cIGraph_matrix_free, res);
 
