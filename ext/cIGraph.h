@@ -230,10 +230,10 @@ VALUE cIGraph_layout_kamada_kawai        (VALUE self,
 				          VALUE initemp,
 				          VALUE coolexp,
 				          VALUE kkconst);
-VALUE cIGraph_layout_reingold_tilford    (VALUE self,
-				          VALUE root);
-VALUE cIGraph_layout_reingold_tilford_circular(VALUE self,
-					       VALUE root);
+// VALUE cIGraph_layout_reingold_tilford    (VALUE self,
+				          // VALUE root);
+// VALUE cIGraph_layout_reingold_tilford_circular(VALUE self,
+					       // VALUE root);
 VALUE cIGraph_layout_grid_fruchterman_reingold(VALUE self,
 					       VALUE niter,
 					       VALUE maxdelta,
