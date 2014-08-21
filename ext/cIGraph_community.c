@@ -266,7 +266,8 @@ igraph_arpack_options_init(&arpack_opt);
   igraph_vector_init(&membership,0);
 
   igraph_community_leading_eigenvector(graph,merges,&membership,
-				       NUM2INT(steps),&arpack_opt);
+				       NUM2INT(steps),&arpack_opt,
+                                       NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
   max_groupid = 0;
   for(i=0;i<igraph_vector_size(&membership);i++){
