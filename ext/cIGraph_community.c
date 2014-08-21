@@ -597,7 +597,7 @@ VALUE cIGraph_community_eb_get_merges(VALUE self, VALUE edges){
     igraph_vector_push_back(&edges_vec,NUM2INT(RARRAY_PTR(edges)[i]));
   }
 
-  igraph_community_eb_get_merges(graph,&edges_vec,res,&bridges_vec);
+  igraph_community_eb_get_merges(graph,&edges_vec,NULL,res,&bridges_vec,NULL,NULL);
 
   bridges_a = rb_ary_new();
   for(i=0;i<igraph_vector_size(&bridges_vec);i++){
