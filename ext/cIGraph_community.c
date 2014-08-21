@@ -539,7 +539,7 @@ VALUE cIGraph_community_edge_betweenness(VALUE self, VALUE directed){
 
   igraph_community_edge_betweenness(graph,
 				    &result_vec,&edge_betw_vec,
-				    merges,&bridges_vec,directed_b);
+				    merges,&bridges_vec,NULL,NULL,directed_b,NULL);
 
   result_a = rb_ary_new();
   for(i=0;i<igraph_vector_size(&result_vec);i++){
