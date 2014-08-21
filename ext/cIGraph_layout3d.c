@@ -114,7 +114,7 @@ VALUE cIGraph_layout_kamada_kawai_3d(VALUE self,
 				NUM2DBL(initemp),
 				NUM2DBL(coolexp),
 				NUM2DBL(kkconst),0,
-                                NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+                                0, 0, 0, 0, 0, 0, 0);
 
   return Data_Wrap_Struct(cIGraphMatrix, 0, cIGraph_matrix_free, res);
 
