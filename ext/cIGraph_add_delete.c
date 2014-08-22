@@ -59,12 +59,11 @@ VALUE cIGraph_add_edges(int argc, VALUE *argv, VALUE self){
     }
     IGRAPH_CHECK(igraph_vector_push_back(&edge_v,vid));
     if (i % 2){
-      // if (attrs != Qnil){
-      //   rb_ary_push((VALUE)e_attr_rec.value,RARRAY_PTR(attrs)[i/2]);
-      // } else {
-      //   rb_ary_push((VALUE)e_attr_rec.value,Qnil);
-      // }
-      rb_ary_push((VALUE)e_attr_rec.value,Qnil);
+      if (attrs != Qnil){
+	rb_ary_push((VALUE)e_attr_rec.value,RARRAY_PTR(attrs)[i/2]);
+      } else {
+	rb_ary_push((VALUE)e_attr_rec.value,Qnil);
+      }
     }
   }
 
