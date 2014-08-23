@@ -70,7 +70,7 @@ VALUE cIGraph_add_edges(int argc, VALUE *argv, VALUE self){
   IGRAPH_CHECK(igraph_vector_ptr_push_back(&edge_attr, &e_attr_rec));
 
   if(igraph_vector_size(&edge_v) > 0){
-    IGRAPH_CHECK(code = igraph_add_edges(graph,&edge_v,NULL));
+    IGRAPH_CHECK(code = igraph_add_edges(graph,&edge_v,&edge_attr));
   }
 
   igraph_vector_destroy(&edge_v);
