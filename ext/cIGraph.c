@@ -229,7 +229,7 @@ void Init_igraph(){
   VALUE cIGraph_otherop;
   VALUE cIGraph_randomise;
 
-  igraph_i_set_attribute_table(NULL);
+  igraph_i_set_attribute_table(&cIGraph_attribute_table);
   igraph_set_error_handler(cIGraph_error_handler);
   igraph_set_warning_handler(cIGraph_warning_handler);  
 
