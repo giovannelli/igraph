@@ -342,7 +342,7 @@ int cIGraph_attribute_add_edges(igraph_t *graph,
   printf("Leaving cIGraph_attribute_add_edges\n");
 #endif
 
-  return IGRAPH_SUCCESS;
+  return 0;
 }
 
 /* Deleting edges */
