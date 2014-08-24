@@ -289,59 +289,59 @@ int cIGraph_attribute_add_edges(igraph_t *graph,
 				const igraph_vector_t *edges, 
 				igraph_vector_ptr_t *attr) {
 
-#ifdef DEBUG
-  printf("Entering cIGraph_attribute_add_edges\n");
-#endif
-
-  int i,j;
-  VALUE edge_array = ((VALUE*)graph->attr)[1];
-  VALUE values;
-
-  // if(attr){
-  //   //If the only record is of type PY_OBJ then use the values as attributes
-  //   if(((igraph_attribute_record_t*)VECTOR(*attr)[0])->type == IGRAPH_ATTRIBUTE_PY_OBJECT){
-  //     values = (VALUE)((igraph_attribute_record_t*)VECTOR(*attr)[0])->value;
-  //     Check_Type(values, T_ARRAY);
-  //     for(i=0;i<RARRAY_LEN(values);i++){
-  //       rb_ary_push(edge_array, RARRAY_PTR(values)[i]);
-  //     }
-  //     //Otherwise read each attriute into hashes and use those
-  //   } else {
-  //     for(i=0;i<igraph_vector_size(edges)/2;i++){
-  //       VALUE record;
-  //       igraph_attribute_record_t *attr_rec;
-  //       char *s;
-  //       record = rb_hash_new();
-  //       for (j=0; j<igraph_vector_ptr_size(attr); j++) {
-  //         VALUE key;
-  //         VALUE value;
-  //         //Add key value pair
-  //         attr_rec = VECTOR(*attr)[j];
-  //         key = rb_str_new2(attr_rec->name);
-  //         switch (attr_rec->type) {
-  //         case IGRAPH_ATTRIBUTE_NUMERIC:
-  //           value=rb_float_new((double)VECTOR(*(igraph_vector_t*)attr_rec->value)[i]);
-  //           break;
-  //         case IGRAPH_ATTRIBUTE_STRING:
-  //           igraph_strvector_get((igraph_strvector_t*)attr_rec->value, i, &s);
-  //           value=rb_str_new2(s);
-  //           break;
-  //         default:
-  //           IGRAPH_WARNING("unsupported attribute type (not string and not numeric)");
-  //           value=Qnil;
-  //           break;
-  //         }
-  //         rb_hash_aset(record,key,value);
-  //       }
-  //       rb_ary_push(edge_array,record);
-  //     }
-  //   }
-  // }
-
-#ifdef DEBUG
-  printf("Leaving cIGraph_attribute_add_edges\n");
-#endif
-
+// #ifdef DEBUG
+//   printf("Entering cIGraph_attribute_add_edges\n");
+// #endif
+// 
+//   int i,j;
+//   VALUE edge_array = ((VALUE*)graph->attr)[1];
+//   VALUE values;
+// 
+//   // if(attr){
+//   //   //If the only record is of type PY_OBJ then use the values as attributes
+//   //   if(((igraph_attribute_record_t*)VECTOR(*attr)[0])->type == IGRAPH_ATTRIBUTE_PY_OBJECT){
+//   //     values = (VALUE)((igraph_attribute_record_t*)VECTOR(*attr)[0])->value;
+//   //     Check_Type(values, T_ARRAY);
+//   //     for(i=0;i<RARRAY_LEN(values);i++){
+//   //       rb_ary_push(edge_array, RARRAY_PTR(values)[i]);
+//   //     }
+//   //     //Otherwise read each attriute into hashes and use those
+//   //   } else {
+//   //     for(i=0;i<igraph_vector_size(edges)/2;i++){
+//   //       VALUE record;
+//   //       igraph_attribute_record_t *attr_rec;
+//   //       char *s;
+//   //       record = rb_hash_new();
+//   //       for (j=0; j<igraph_vector_ptr_size(attr); j++) {
+//   //         VALUE key;
+//   //         VALUE value;
+//   //         //Add key value pair
+//   //         attr_rec = VECTOR(*attr)[j];
+//   //         key = rb_str_new2(attr_rec->name);
+//   //         switch (attr_rec->type) {
+//   //         case IGRAPH_ATTRIBUTE_NUMERIC:
+//   //           value=rb_float_new((double)VECTOR(*(igraph_vector_t*)attr_rec->value)[i]);
+//   //           break;
+//   //         case IGRAPH_ATTRIBUTE_STRING:
+//   //           igraph_strvector_get((igraph_strvector_t*)attr_rec->value, i, &s);
+//   //           value=rb_str_new2(s);
+//   //           break;
+//   //         default:
+//   //           IGRAPH_WARNING("unsupported attribute type (not string and not numeric)");
+//   //           value=Qnil;
+//   //           break;
+//   //         }
+//   //         rb_hash_aset(record,key,value);
+//   //       }
+//   //       rb_ary_push(edge_array,record);
+//   //     }
+//   //   }
+//   // }
+// 
+// #ifdef DEBUG
+//   printf("Leaving cIGraph_attribute_add_edges\n");
+// #endif
+// 
   return 0;
 }
 
