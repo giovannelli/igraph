@@ -69,7 +69,7 @@ igraph_attribute_table_t cIGraph_attribute_table = {
   cIGraph_attribute_copy,
   cIGraph_attribute_add_vertices,
   cIGraph_attribute_delete_vertices,
-  cIGraph_attribute_add_edges,
+  //cIGraph_attribute_add_edges,
   cIGraph_attribute_delete_edges,
   cIGraph_attribute_permute_edges,
   cIGraph_attribute_get_info,
@@ -285,10 +285,10 @@ void cIGraph_attribute_delete_vertices(igraph_t *graph,
 }
 
 /* Adding edges */
-int cIGraph_attribute_add_edges(igraph_t *graph, 
-				const igraph_vector_t *edges, 
-				igraph_vector_ptr_t *attr) {
-
+// int cIGraph_attribute_add_edges(igraph_t *graph, 
+// 				const igraph_vector_t *edges, 
+// 				igraph_vector_ptr_t *attr) {
+// 
 // #ifdef DEBUG
 //   printf("Entering cIGraph_attribute_add_edges\n");
 // #endif
@@ -342,10 +342,10 @@ int cIGraph_attribute_add_edges(igraph_t *graph,
 //   printf("Leaving cIGraph_attribute_add_edges\n");
 // #endif
 // 
-
-  printf("cIGraph_attribute_add_edges\n");
-  return 1;
-}
+// 
+//   printf("cIGraph_attribute_add_edges\n");
+//   return 1;
+// }
 
 /* Deleting edges */
 void cIGraph_attribute_delete_edges(igraph_t *graph, const igraph_vector_t *idx) {
